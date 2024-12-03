@@ -1,4 +1,4 @@
-use std::collections::BTreeSet;
+use std::collections::HashSet;
 use std::fs::File;
 use std::io::{self, BufRead};
 use cute::c;
@@ -40,8 +40,7 @@ fn main() {
 
         res = left.iter().zip(right.iter()).map(|(l, r)| (l - r).abs()).sum();
     } else if pt.trim() == "2" {
-        let set_left: BTreeSet<i64> = BTreeSet::from_iter(left.clone());
-        let set_right: BTreeSet<i64> = BTreeSet::from_iter(right.clone());
+        let set_left: HashSet<i64> = HashSet::from_iter(left.clone());
         let mut buf: i64;
 
         for unique_item in set_left {
@@ -55,5 +54,5 @@ fn main() {
         res = 0;
     }
     
-    println!("Result: {}\nIf it's 0, then most probably it's an error lel", res);
+    println!("Result: {}\n(If it's 0, then most probably it's an error lel)", res);
 }
