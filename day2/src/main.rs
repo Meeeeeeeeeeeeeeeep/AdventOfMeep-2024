@@ -69,7 +69,7 @@ fn solve(mode: i32) -> io::Result<()> {
 }
 
 fn main() {
-    println!("Which part?\n> ");
+    print!("Which part?\n> ");
     let mut pt = String::new();
  
     io::stdin().read_line(&mut pt).unwrap();
