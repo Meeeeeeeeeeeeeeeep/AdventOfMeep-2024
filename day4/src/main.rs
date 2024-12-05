@@ -18,13 +18,13 @@ fn pt_1(grid: &[Vec<char>], word: &str) -> usize {
 
     // all 8 directions (dx, dy)
     let directions = [
-        (0, 1),   // N
-        (0, -1),  // S
+        (0, -1),   // N
+        (0, 1),  // S
         (1, 0),   // E
         (-1, 0),  // W
-        (1, 1),   // NE
-        (1, -1),  // NW
-        (-1, 1),  // SE
+        (1, -1),   // NE
+        (-1, -1),  // NW
+        (1, 1),  // SE
         (-1, -1), // SW
     ];
 
